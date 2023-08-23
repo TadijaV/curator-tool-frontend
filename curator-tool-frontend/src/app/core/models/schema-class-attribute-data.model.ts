@@ -24,9 +24,7 @@ export class AttributTableData implements AttributeData {
   ) {
 
     this.properties.origin = toClassName(properties.origin);
-
-
-
+    this.properties.attributeClasses[0].type = toClassName(properties.attributeClasses[0].type);
   }
 }
 

@@ -3,6 +3,10 @@
   min-width: 100%;
   max-width: 100%;
 
+  th.mat-mdc-header-cell {
+    background-color: #00072ae1;
+    color: white;
+  }
 
   tr.mat-header-row {
     background-color: #00072ae1;
@@ -26,6 +30,13 @@
 
 .mat-mdc-row:hover .mat-mdc-cell {
   border-color: rgb(69, 127, 236);
+  background-color: rgb(187, 187, 187);
+}
+
+th.mat-header-cell {
+
+  background-color: rgb(69, 127, 236);
+
 }
 
 .demo-row-is-clicked {

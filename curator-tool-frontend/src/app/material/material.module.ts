@@ -8,13 +8,14 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatMenuModule} from "@angular/material/menu";
-import {MatListModule} from "@angular/material/list";
-import {MatDialogModule} from "@angular/material/dialog";
-import {MatSortModule} from "@angular/material/sort";
-import {MatTabsModule} from "@angular/material/tabs";
-import {MatIconModule} from "@angular/material/icon";
-import {MatCardModule} from "@angular/material/card";
+import { MatMenuModule } from "@angular/material/menu";
+import { MatListModule } from "@angular/material/list";
+import { MatDialogModule } from "@angular/material/dialog";
+import { MatSortModule } from "@angular/material/sort";
+import { MatTabsModule } from "@angular/material/tabs";
+import { MatIconModule } from "@angular/material/icon";
+import { MatCardModule } from "@angular/material/card";
+import { MatTreeModule } from '@angular/material/tree';
 
 @NgModule({
   declarations: [],
@@ -35,7 +36,8 @@ import {MatCardModule} from "@angular/material/card";
     MatSortModule,
     MatTabsModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatTreeModule
   ],
   exports: [
     MatTableModule,
@@ -53,7 +55,8 @@ import {MatCardModule} from "@angular/material/card";
     MatSortModule,
     MatTabsModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatTreeModule
   ]
 })
 export class MaterialModule { }

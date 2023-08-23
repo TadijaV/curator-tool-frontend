@@ -1,7 +1,22 @@
 .position {
     display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    min-height: 100vh;
+    width: 100%;
 
 }
+
+
+.app-schema-panel.custom-schema {
+    flex-grow: 0.5;
+}
+
+.app-attribute-table.custom-attribute {
+    flex-grow: 1;
+}
+
+
 
 button {
 

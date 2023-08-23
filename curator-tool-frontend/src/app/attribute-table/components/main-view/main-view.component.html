@@ -2,13 +2,13 @@
     <button routerLink="/entries-table">Entry Table</button>
 </div>
 
-<div *ngIf="bothLoad" class="position">
+<div *ngIf="bothLoad" class="position" style="width: 100%;">
 
 
-    <app-schema-panel [dataSource]="menuItems"></app-schema-panel>
+    <app-schema-panel [dataSource]="menuItems" class="app-schema-panel custom-schema"></app-schema-panel>
 
     <ng-container style="width:fit-content" *ngIf="menuLoad">
-        <app-attribute-table></app-attribute-table>
+        <app-attribute-table class="app-attribute-table custom-attribute"></app-attribute-table>
     </ng-container>
 
 </div>

@@ -21,3 +21,14 @@ nav {
 
     }
 }
+
+// .mat-tree-node {
+//      border: 1px solid rgb(11, 56, 100);
+
+// }
+
+.mat-tree-node:hover {
+    border: 1px solid rgb(11, 56, 100);
+    background-color: rgb(199, 199, 199);
+
+}

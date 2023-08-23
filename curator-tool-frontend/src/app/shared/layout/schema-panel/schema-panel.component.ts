@@ -1,3 +1,4 @@
+import { FlatTreeControl } from '@angular/cdk/tree';
 import { Component, Input, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { DataService } from 'src/app/core/services/data.service';
@@ -10,11 +11,24 @@ import { DataService } from 'src/app/core/services/data.service';
 
 })
 export class SchemaPanelComponent implements OnInit {
-    //menuItems$: Observable<string[]> = this.dataservice.fetchSchemaClasses();
+    menuItems$: Observable<string[]> = this.dataservice.fetchSchemaClasses();
     @Input() dataSource: string[] = new Array<string>;
     // menuItems: string[] = this.setMenuItems();
 
     constructor(private dataservice: DataService) { }
+
+    private _transformer = (node: string, level: number) => {
+        return {
+            expandable: !!node && node.length > 0,
+            name: node,
+            level: level,
+        };
+    }
+
+    treeControl = new FlatTreeControl<string>(
+        node => 1,
+        node => true,
+    );
 
 
 
@@ -29,6 +43,7 @@ export class SchemaPanelComponent implements OnInit {
     // }
 
     ngOnInit() {
+        console.log(this.menuItems$)
 
     }
 }
@@ -36,3 +51,5 @@ export class SchemaPanelComponent implements OnInit {
 function Import(): (target: SchemaPanelComponent, propertyKey: "dataSource") => void {
     throw new Error('Function not implemented.');
 }
+
+

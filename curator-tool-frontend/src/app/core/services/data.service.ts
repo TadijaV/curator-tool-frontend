@@ -56,6 +56,16 @@ export class DataService {
   fetchSchemaClasses(): Observable<string[]> {
 
     return this.http.get<string[]>(this.schemaClassUrl)
+    //   .pipe(
+    //            map((schemaClasses: any[]) => {
+    //             schemaClasses.sort((a, b) => a.localeCompare(b));
+
+    //           })
+
+
+    //   )
   }
+
 }
+
 
